@@ -5,7 +5,7 @@
 int led1 = D6; // Instead of writing D0 over and over again, we'll write led1
 int led2 = D7; // Instead of writing D7 over and over again, we'll write led2
 
-char* arr = ".-.. .- -.-. .... .-.. .- -.";
+char* arr = ".-.. .- -.-. .... .-.. .- -."; // Morse code string generated for "Lachlan"
 int arrSize = sizeof(arr)/sizeof(arr[0]); // doesn't work :( I just hardcode the value of 28 instead.
 int timeUnit = 100;
 
