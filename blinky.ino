@@ -22,38 +22,36 @@ void loop() {
     // The space between symbols (dots and dashes) of the same letter is 1 time unit.
     // The space between letters is 3 time units.
     // The space between words is 7 time units.
-    
-	for (int i = 0; i < 28; i++)
-	{
-		if (arr[i] == ' ') // space betweem letters
-		{
-			digitalWrite(led1, LOW);
-			digitalWrite(led2, LOW);
-			delay(timeUnit * 3);
-		}
-		else
-		{
-			if (arr[i] == '.')
-			{
-				digitalWrite(led1, HIGH);
-				digitalWrite(led2, HIGH);
-				delay(timeUnit * 1);
-			}
-			else if (arr[i] == '-')
-			{
-				digitalWrite(led1, HIGH);
-				digitalWrite(led2, HIGH);
-				delay(timeUnit * 3);
-			}
+    for (int i = 0; i < 28; i++)
+    {
+        if (arr[i] == ' ') // space betweem letters
+        {
+            digitalWrite(led1, LOW);
+            digitalWrite(led2, LOW);
+            delay(timeUnit * 3);
+        }
+        else
+        {
+            if (arr[i] == '.')
+            {
+                digitalWrite(led1, HIGH);
+                digitalWrite(led2, HIGH);
+                delay(timeUnit * 1);
+            }
+            else if (arr[i] == '-')
+            {
+                digitalWrite(led1, HIGH);
+                digitalWrite(led2, HIGH);
+                delay(timeUnit * 3);
+            }
 			
-			digitalWrite(led1, LOW);
-		    digitalWrite(led2, LOW);
-		    delay(timeUnit * 1);
-		    
-		    // TODO: this will put a 1 TU space after every symbol including spaces which probably shouldn't happen...
-		}
-	}
+            // TODO: this will put a 1 TU space after every symbol including spaces which probably shouldn't happen...
+            digitalWrite(led1, LOW);
+            digitalWrite(led2, LOW);
+            delay(timeUnit * 1);
+        }
+    }
 	
-	delay(timeUnit * 7); // 7 TU space before resetting
+    delay(timeUnit * 7); // 7 TU space before resetting
 }
 
