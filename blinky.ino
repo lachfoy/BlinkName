@@ -1,5 +1,5 @@
 // ------------
-// Blink an LED
+// Blink an LED to MORSE CODE
 // ------------
 
 int led1 = D6; // Instead of writing D0 over and over again, we'll write led1
